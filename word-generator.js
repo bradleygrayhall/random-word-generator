@@ -5,7 +5,8 @@ randomNum = (num) => {
 const words = {
     signs: ['Earth', 'Moon', 'Sun', 'Star'],
     fortune: ['outlook not good', 'bleak', 'bad', 'just give up', 'outlook good', 'Good news'],
-    advice: ['Drink', 'Go out and eat', 'Kill your family', 'give up', 'dont read me']
+    advice: ['Drink', 'Go out and eat', 'Kill your family', 'give up', 'dont read me'],
+    emoji: ['💣', '☢️', '😊', '❤️']
 }
 
 
@@ -23,6 +24,9 @@ for (let prop in words) {
             break
         case 'advice':
             personalWisdom.push(`You should: ${words[prop][index]}.`)
+            break
+        case 'emoji':
+            personalWisdom.push(`Your emoji of the day is: ${words[prop][index]}!`)
             break
         default:
             personalWisdom.push("There's not enough info!")
